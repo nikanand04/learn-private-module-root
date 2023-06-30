@@ -3,13 +3,11 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.0.0"
+      region = var.region
     }
   }
 }
 
-provider "aws" {
-  region = var.region
-}
 
 module "s3-webapp" {
   #source  = "app.terraform.io/nikanand04/s3-webapp/aws"
